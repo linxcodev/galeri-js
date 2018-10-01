@@ -1,4 +1,4 @@
-# membuat galeri dengan javascript
+# Membuat galeri dengan javascript
 
 ### Inisialisasi variable
 ```javascript
