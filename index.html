@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Galeri JS</title>
+</head>
+<body>
+  <h1>Membuat Galeri Menggunakan JS</h1>
+  <img src="gambar/0.png" alt="img galeri" width="400px" id="galeri">
+  <a href="#" onclick="ganti(0)">1</a>
+  <a href="#" onclick="ganti(1)">2</a>
+  <a href="#" onclick="ganti(2)">3</a>
+  <a href="#" onclick="ganti(3)">4</a>
+  <a href="#" onclick="ganti(4)">5</a>
+
+  <script>
+    function ganti(angka) {
+      var lokasi = 'gambar/' + angka + '.png'
+      document.getElementById('galeri').src = lokasi
+      
+      return false
+    }
+  </script>
+</body>
+</html>
