@@ -10,7 +10,11 @@
   <h1>Membuat Galeri Menggunakan JS</h1>
   <img src="gambar/0.png" alt="img galeri" width="400px" id="galeri">
   <br>
-
+  
+  <br>
+  <div id="caption">Benjamin</div>
+  <br>
+  
   <a href="#" onclick="sebelum()"><<</a>
 
   <a href="#" onclick="ganti(0)">1</a>
@@ -23,12 +27,15 @@
 
   <script>
     var nomor = 0
+    var caption = document.getElementById('caption')
+    var dataCaption = ['Benjamin', 'Voltaire', 'Phil', 'Leo', 'Aris']
 
     function ganti(angka) {
       nomor = angka  
       var lokasi = 'gambar/' + angka + '.png'
       document.getElementById('galeri').src = lokasi
-      
+      caption.innerHTML = dataCaption[angka]
+
       return false
     }
 
@@ -40,7 +47,8 @@
 
       var lokasi = 'gambar/' + nomor + '.png'
       document.getElementById('galeri').src = lokasi
-      
+      caption.innerHTML = dataCaption[nomor]      
+
       return false
     }
 
@@ -52,6 +60,7 @@
 
       var lokasi = 'gambar/' + nomor + '.png'
       document.getElementById('galeri').src = lokasi
+      caption.innerHTML = dataCaption[nomor]
       
       return false
     }
