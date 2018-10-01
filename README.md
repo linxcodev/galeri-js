@@ -9,37 +9,31 @@ var nomor = 0
 ```javascript
 function ganti(angka) {
    nomor = angka  
-   var lokasi = 'gambar/' + angka + '.png'
-   document.getElementById('galeri').src = lokasi
-    
-   // untuk mematikan fungsi asli dari element html
-   return false
+   gantiGambar(nomor)
 }
 ```
 
 ### Tombol sebelum dan sesudah (Next and Previous)
 ```javascript
 function sebelum() {
-   nomor -= 1
-      
-   if (nomor < 0)
-     nomor = 4
-
-   var lokasi = 'gambar/' + nomor + '.png'
-   document.getElementById('galeri').src = lokasi
-      
-   return false
+  nomor--
+  if (nomor < 0) nomor = 4
+  gantiGambar(nomor)
 }
 
 function sesudah() {
-   nomor += 1
-      
-   if (nomor > 4)
-   nomor = 0
-
-   var lokasi = 'gambar/' + nomor + '.png'
-   document.getElementById('galeri').src = lokasi
-      
-   return false
+  nomor++
+  if (nomor > 4) nomor = 0
+  gantiGambar(nomor)
 }
 ```
+
+### Function gantiGambar()
+```javascript
+function gantiGambar(angka) {
+  var lokasi = 'gambar/' + angka + '.png'
+  document.getElementById('galeri').src = lokasi
+
+  // untuk mematikan fungsi asli dari element html
+  return false
+}
